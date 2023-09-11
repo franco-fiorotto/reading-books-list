@@ -4,11 +4,9 @@ export default async function Home() {
   const data = await getData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center w-full">
       <h1 className="p-8 text-[3rem]">Reading Book List</h1>
-      <div className="px-24">
-        <BookList books={data} />
-      </div>
+      <BookList books={data} />
     </main>
   );
 }

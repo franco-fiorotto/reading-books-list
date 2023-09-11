@@ -48,11 +48,11 @@ export default function BookList({ books }: { books: Book[] }) {
         className="border-2 rounded border-gray-500 px-6 py-2 w-[20rem]"
         onChange={onChangeSearchBook}
       />
-      <ul className="flex flex-wrap gap-6 items-center justify-center py-10">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center py-10">
         {filteredBooks.map((book) => (
           <li
             key={book.ISBN}
-            className="w-[10rem] hover:border-[1px] cursor-pointer"
+            className="w-[10rem] hover:border-[1px] cursor-pointer "
             onClick={() => onClickBookToSaveBook(book)}
           >
             <Image
@@ -62,15 +62,15 @@ export default function BookList({ books }: { books: Book[] }) {
               height={350}
               aria-label="Book cover"
               title={`${book.title} by ${book.author.name}`}
-              className="object-cover "
+              className="object-cover  "
             />
           </li>
         ))}
       </ul>
       {savedBooks.length > 0 && (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center ">
           <h2 className="text-2xl">Saved books</h2>
-          <ul className="flex flex-wrap gap-6 items-center justify-center py-10">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center py-10">
             {savedBooks.map((book) => (
               <li
                 key={book.ISBN}
