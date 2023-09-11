@@ -2,7 +2,6 @@ import { Book } from "@/model/model";
 import BookImage from "./BookImage";
 import useBook from "@/hooks/useBook";
 import SearchBook from "../searchBook/SearchBook";
-import VerticalDivider from "../divider/VerticalDivider";
 
 export default function BooksList({
   books,
