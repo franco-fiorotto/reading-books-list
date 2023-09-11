@@ -1,12 +1,12 @@
-import BookList from "./bookList/page";
+import Books from "./books/page";
 
 export default async function Home() {
   const data = await getData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center w-full">
+    <main className="flex min-h-screen flex-col items-center justify-center w-full ">
       <h1 className="p-8 text-[3rem]">Reading Book List</h1>
-      <BookList books={data} />
+      <Books books={data} />
     </main>
   );
 }
