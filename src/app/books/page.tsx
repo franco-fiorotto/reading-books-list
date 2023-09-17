@@ -4,7 +4,9 @@ import useBook from "@/hooks/useBook";
 import { Book } from "@/model/model";
 
 export default function Books({ books }: { books: Book[] }) {
-  const { savedBooks, saveBook, removeBook } = useBook({ books });
+  const { savedBooks, saveBook, removeBook, availableBooks } = useBook({
+    books,
+  });
 
   const onClickBookToSaveBook = (book: Book) => {
     saveBook(book);
@@ -21,7 +23,7 @@ export default function Books({ books }: { books: Book[] }) {
       } gap-20  `}
     >
       <BooksList
-        books={books}
+        books={availableBooks}
         title="Books to read"
         onClick={onClickBookToSaveBook}
       />
