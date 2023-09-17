@@ -11,6 +11,7 @@ export default function SearchBook({
     <input
       type="text"
       placeholder="Search book"
+      aria-label="Search book"
       className="border-2 rounded border-gray-500 px-6 py-2 w-[20rem]"
       onChange={onChangeSearchBook}
     />
