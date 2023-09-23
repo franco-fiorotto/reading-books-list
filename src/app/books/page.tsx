@@ -1,7 +1,7 @@
 "use client";
 import BooksList from "@/components/book/BooksList";
 import useBook from "@/hooks/useBook";
-import { Book } from "@/model/model";
+import { Book } from "@/app/api/books/model/book";
 
 export default function Books({ books }: { books: Book[] }) {
   const { savedBooks, saveBook, removeBook, availableBooks } = useBook({

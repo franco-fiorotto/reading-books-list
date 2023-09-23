@@ -1,11 +1,8 @@
 import { NextResponse } from "next/server";
-import { mockedData } from "./mockedBooksList";
-import { Book, Library } from "@/model/model";
+import GetBooksController from "./application/getBooksUseCase/GetBooksController";
 
 export async function GET() {
-  const data = { ...mockedData };
-
-  const books: Book[] = data.library.map((book) => book.book);
+  const { books } = GetBooksController();
 
   return NextResponse.json(books);
 }

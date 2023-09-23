@@ -1,4 +1,4 @@
-import { Book } from "@/model/model";
+import { Book } from "@/app/api/books/model/book";
 import { useCallback, useState } from "react";
 
 export default function useBook({ books }: { books: Book[] }): {

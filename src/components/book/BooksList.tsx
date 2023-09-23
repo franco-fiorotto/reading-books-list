@@ -1,4 +1,4 @@
-import { Book } from "@/model/model";
+import { Book } from "@/app/api/books/model/book";
 import BookImage from "./BookImage";
 import useBook from "@/hooks/useBook";
 import SearchBook from "../searchBook/SearchBook";
