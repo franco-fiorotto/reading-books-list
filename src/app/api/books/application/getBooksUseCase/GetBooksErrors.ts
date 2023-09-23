@@ -1,7 +1,7 @@
 export namespace GetBooksErrors {
   export class GeneralError {
     constructor(error: Error) {
-      new Error(`General Error: , ${error.message}`);
+      new Error(`Error while getting books: , ${error.message}`);
     }
   }
 }
