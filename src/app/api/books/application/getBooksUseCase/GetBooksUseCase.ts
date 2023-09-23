@@ -2,7 +2,9 @@ import { mockedData } from "../../mockedBooksList";
 import { GetBooksErrors } from "./GetBooksErrors";
 
 export default function GetBooksUseCase() {
-  const execute = () => {
+  const execute: {
+    (): any | GetBooksErrors.GeneralError;
+  } = () => {
     try {
       const data = { ...mockedData };
 
